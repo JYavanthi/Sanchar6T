@@ -1,0 +1,153 @@
+@import '../../../styles.scss';
+
+.mainDiv {
+    display: grid;
+    gap: 30px;
+    background: white;
+    padding: 40px;
+
+    .register-Agenct {
+        color: gray;
+    }
+
+    .inputContainer {
+        width: 100%;
+        position: relative;
+    }
+
+    .Registration {
+        border-bottom: 1px solid lightgray;
+        border-top: 1px solid lightgrey;
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        padding: 10px 0;
+
+        div:first-of-type {
+            display: flex;
+            gap: 50px;
+        }
+
+        i {
+            color: #8c52ff;
+        }
+
+        span {
+            color: gray;
+        }
+    }
+
+    .form-container {
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+    }
+
+    h2 {
+        color: #333;
+    }
+
+    .agent-registration {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 20px;
+
+        input {
+            width: 100%;
+        }
+        select{
+            width: 100%;
+            height: 41px !important;
+        }
+    }
+
+    .form-row {
+        display: flex;
+        justify-content: space-between;
+        gap: 20px;
+    }
+
+    .form-group {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    label {
+        font-weight: bold;
+        margin-bottom: 5px;
+    }
+
+    input {
+        padding: 8px;
+        border: 1px solid #ccc;
+        // border-radius: 5px;
+        font-size: 16px;
+    }
+
+    // button {
+    //     margin-top: 10px;
+    //     padding: 10px;
+    //     color: $violetColor;
+    //     color: white;
+    //     border: none;
+    //     border-radius: 30px;
+    //     font-size: 16px;
+    //     cursor: pointer;
+    //     width: 60%;
+    //     color: #8c52ff;
+    // }
+
+    // button:hover {
+    //     background: #8c52ff;
+    //     color: white;
+    // }
+
+    .submitClear {
+        display: flex;
+        gap: 10px;
+
+        .submit,
+        .clear {
+            @extend .lightVioletWhite;
+            border: none;
+            border-radius: 30px;
+            padding: 5px 25px;
+            transition: all 0.3s ease;
+
+            &:hover {
+                @extend .violetWhite;
+            }
+        }
+    }
+
+    .textAreaDiv {
+        textarea {
+            width: 100%;
+            border-radius: 5px;
+            border: 1px solid lightgray;
+        }
+    }
+
+    .textAreaDiv {
+        grid-column: 1/-1;
+
+        textarea {
+            height: 70px;
+            border-radius: 10px;
+            padding: 5px 10px;
+        }
+    }
+}
+
+.GSTtoggle {
+    display: flex;
+    align-items: end;
+    position: relative;
+    bottom: 10px;
+}
+
+.gstInputFields {
+    @extend .gridTemplate;
+    gap: 10px;
+    padding: 0 !important;
+}

@@ -1,0 +1,129 @@
+<form [formGroup]="userForm">
+    <div class="mainDiv">
+        <div class="register-Agenct">
+            <h2> <b>REGISTER FOR AN AGENCY</b>
+            </h2>
+            <span>
+                Kindly complete the form below and submit it. We will reach out to you shortly. </span>
+        </div>
+        <div class="Registration">
+            <span><b>REGISTRATION PROCESS</b></span>
+            <div>
+                <span><i class="fa-solid fa-mobile-screen-button"></i> Send us your contact details.</span>
+                <span><i class="fa-solid fa-phone"></i> We will contact you whithin 24 hours.</span>
+                <span> <b><i class="fa-solid fa-check"></i></b> On completion,you will get login ID and password.</span>
+            </div>
+        </div>
+        <div class="form-container">
+            <h2><b>AGENT REGISTRATION</b></h2>
+            <div class="agent-registration">
+                <div>
+                    <label for="name" class="asterisk">First Name</label>
+                    <input type="text" id="name" formControlName="name" required />
+                </div>
+                <div>
+                    <label for="name" class="asterisk">Last Name</label>
+                    <input type="text" id="name" formControlName="LastName" />
+                </div>
+                <div>
+                    <label for="phone" class="asterisk">Phone</label>
+                    <input type="tel" id="phone" formControlName="phone" maxlength="10" />
+                </div>
+                <div>
+                    <label for="email" class="asterisk">Email</label>
+                    <input type="email" id="email" formControlName="email" />
+                </div>
+                <div>
+                    <label for="password" class="asterisk">password</label>
+                    <input type="password" id="password" formControlName="password" />
+                </div>
+                <div>
+                    <label for="gender" class="asterisk">Gender</label>
+                    <select formControlName="gender" style="height: 35px;">
+                        <option value="" selected hidden disabled>Select Gender</option>
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="status" class="asterisk">Status</label>
+                    <!-- <input type="status" id="status" formControlName="status" /> -->
+                    <select formControlName="status" style="height: 35px;">
+                        <option value="active">
+                            Active
+                        </option>
+                        <option value="unactive">
+                            Unactive
+                        </option>
+                    </select>
+                </div>
+                <div>
+                    <label for="organization" class="asterisk">Organization</label>
+                    <input type="text" id="organization" formControlName="organization" />
+                </div>
+                <div>
+                    <label for="state">State</label>
+                    <input type="text" id="state" formControlName="state" />
+                </div>
+                <div>
+                    <label for="city" class="asterisk">City</label>
+                    <input type="text" id="city" formControlName="city" />
+                </div>
+                <div>
+                    <label for="city" class="asterisk">Company Name</label>
+                    <input type="text" id="city" formControlName="CompanyName" />
+                </div>
+                <div>
+                    <label for="city" class="asterisk">Company Address</label>
+                    <input type="text" id="city" formControlName="CompanyAddress" />
+                </div>
+                <div>
+                    <label class="asterisk">In</label>
+                    <input type="file" formControlName="In">
+                </div>
+                <div>
+                    <label class="asterisk">Out</label>
+                    <input type="file" formControlName="Out">
+                </div>
+                <div>
+                    <label class="asterisk">Office</label>
+                    <input type="file" formControlName="officename">
+                </div>
+                <div>
+                    <label for="gstNo" class="asterisk">GST No</label>
+                    <input type="text" maxlength="15" formControlName="gstNo" name="gstNo">
+                </div>
+                <div>
+                    <label class="asterisk">Shop Address</label>
+                    <input type="text" formControlName="ShopAddress">
+                </div>
+                <!-- <div class="agent-registration">
+                <div class="GSTtoggle">
+                    <mat-slide-toggle formControlName="toggleGST" name="toggleGST">Enter GST Details
+                        (optional)</mat-slide-toggle>
+                </div>
+                <ng-container *ngIf="userForm.controls['toggleGST'].value">
+                    <div class="gstInputFields" [@expandCollapse]>
+                        <div>
+                            <label for="gstNo">GST No</label>
+                            <input type="text" maxlength="15" formControlName="gstNo" name="gstNo">
+                        </div>
+                        <div>
+                            <label for="registeredCompanyName">Registered Company Name</label>
+                            <input type="text" formControlName="registeredCompanyName" name="registeredCompanyName">
+                        </div>
+                    </div>
+                </ng-container>
+            </div> -->
+                <div class="textAreaDiv">
+                    <label for="Comments">Comments</label>
+                    <textarea formControlName="Comments"></textarea>
+                </div>
+                <div class="submitClear">
+                    <button class="submit" (click)="Submit()">Submit</button>
+                    <button class="clear" (click)="onClear()">Clear</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>

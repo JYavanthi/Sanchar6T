@@ -1,0 +1,16 @@
+<div class="loader-container" *ngIf="isLoading$ | async">
+    <div class="loader"></div>
+  </div>
+  
+  <button *ngIf="showGoUpButton" class="go-up-btn" (click)="scrollToTop()">
+    <i class="fa-solid fa-arrow-up"></i>
+  </button>
+  
+  <app-header></app-header>
+  <app-global-alert></app-global-alert>
+  
+  <div class="content-wrapper">
+    <router-outlet></router-outlet>
+  </div>
+  
+  <app-footer></app-footer>

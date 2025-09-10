@@ -1,0 +1,27 @@
+@import '../../../../styles.scss';
+
+.inputFields {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+
+    input{
+        width: 100%;
+    }
+}
+.submitClear {
+    display: flex;
+    gap: 10px;
+
+    button {
+        @extend .lightVioletWhite;
+        border: none;
+        border-radius: 30px;
+        padding: 5px 25px;
+        transition: all 0.3s ease;
+
+        &:hover {
+            @extend .violetWhite;
+        }
+    }
+}

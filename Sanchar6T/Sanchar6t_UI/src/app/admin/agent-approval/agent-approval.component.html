@@ -1,0 +1,101 @@
+<!-- <div class="agent-table-container">
+    <h2 class="table-title">Travel Agent Details</h2>
+    <table class="agent-table">
+        <thead>
+            <tr>
+                <th>Agent ID</th>
+                <th>Name</th>
+                <th>Contact No</th>
+                <th>Company ID</th>
+                <th>Company Name</th>
+                <th>Email</th>
+                <th>City</th>
+                <th>State</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let agent of agentList">
+                <td>{{ agent.agentDtlId }}</td>
+                <td>{{ agent.firstName }} {{ agent.middleName }} {{ agent.lastName }}</td>
+                <td>{{ agent.contactNo }}</td>
+                <td>{{ agent.companyId }}</td>
+                <td>{{ agent.companyName }}</td>
+                <td>{{ agent.email }}</td>
+                <td>{{ agent.city }}</td>
+                <td>{{ agent.state }}</td>
+                <td class="Approve-reject">
+                    <div class="hover-container">
+                        <button class="approve"><i class="fa-solid fa-check"></i></button>
+                        <div class="hover-content">
+                            Approve
+                        </div>
+                    </div>
+                    <div class="hover-container">
+                        <button class="reject"><i class="fa-solid fa-xmark"></i></button>
+                        <div class="hover-content">
+                            Reject
+                        </div>
+                    </div>
+                    <div class="hover-container">
+                        <button class="delete"><i class="fa-solid fa-trash-can"></i></button>
+                        <div class="hover-content">
+                               Delete
+                        </div>
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div> -->
+
+<div class="agent-table-container">
+    <h2 class="table-title">Travel Agent Details</h2> 
+         <table class="agent-table">
+        <thead>
+            <tr>
+                <th>Agent ID</th>
+                <th>Name</th>
+                <th>Contact No</th>
+                <th>Company ID</th>
+                <th>Company Name</th>
+                <th>Email</th>
+                <th>City</th>
+                <th>State</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let agent of agentList">
+                <td>{{ agent.agentDtlId }}</td>
+                <td>{{ agent.firstName }} {{ agent.middleName }} {{ agent.lastName }}</td>
+                <td>{{ agent.contactNo }}</td>
+                <td>{{ agent.companyId }}</td>
+                <td>{{ agent.companyName }}</td>
+                <td>{{ agent.email }}</td>
+                <td>{{ agent.city }}</td>
+                <td>{{ agent.state }}</td>
+                <td class="Approve-reject">
+                    <div class="hover-container">
+                        <button class="approve" (click)="approveAgent(agent.agentDtlId)">
+                            <i class="fa-solid fa-check"></i>
+                        </button>
+                        <div class="hover-content">Approve</div>
+                    </div>
+                    <div class="hover-container">
+                        <button class="reject">
+                            <i class="fa-solid fa-xmark"></i>
+                        </button>
+                        <div class="hover-content">Reject</div>
+                    </div>
+                    <div class="hover-container">
+                        <button class="delete">
+                            <i class="fa-solid fa-trash-can"></i>
+                        </button>
+                        <div class="hover-content">Delete</div>
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

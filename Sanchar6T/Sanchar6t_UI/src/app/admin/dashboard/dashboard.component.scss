@@ -1,0 +1,17 @@
+@import '../../../styles.scss';
+
+
+
+// ---> Dashboard UI <---
+
+.mainDiv{
+    @extend .flexJustifySpaceBetween;
+    width: 100%;
+
+    .firstDiv{
+        width: 75%;
+    }
+    .secondDiv{
+        width: 25%;
+    }
+}
